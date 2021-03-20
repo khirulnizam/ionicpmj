@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Search product
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img src="assets/banner-search.png">
+    <ion-card-content>
+      <ion-searchbar (ionChange)="filterproducts($event)"></ion-searchbar>
+      <hr>
+      <ion-item *ngFor="let product of productlist">
+        {{product.productcode}} {{product.productname}} 
+        Price RM{{product.price}} 
+        <ion-button color="warning"
+        (click)="updateproduct(product)"
+        slot="end">
+          <ion-icon name="create"></ion-icon>
+        </ion-button>
+        <ion-button color="danger"
+        (click)="deleteproduct(product.id)"
+        slot="end">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
