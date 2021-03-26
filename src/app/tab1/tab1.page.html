@@ -24,4 +24,17 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
+
+  <ion-button (click)="tangkapgambar()" expand="block">
+    Kamera
+    <ion-icon name="camera"></ion-icon>
+  </ion-button>
+  <ion-button (click)="geolocate()" color="success" expand="block">
+    Geo
+    <ion-icon name="location"></ion-icon>
+  </ion-button>
+  <ion-button (click)="localnoti()" color="warning" expand="block">
+    Notify
+    <ion-icon name="alert-circle"></ion-icon>
+  </ion-button>
 </ion-content>
